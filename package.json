@@ -1,0 +1,39 @@
+{
+  "name": "algorithm-actual-combat",
+  "version": "1.0.0",
+  "description": "算法实战",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vhtml/algorithm-actual-combat.git"
+  },
+  "author": "vhtml",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vhtml/algorithm-actual-combat/issues"
+  },
+  "homepage": "https://github.com/vhtml/algorithm-actual-combat#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "husky": "2.2.0",
+    "lint-staged": "8.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "examples/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
